@@ -86,8 +86,11 @@ function budgets(budget, p1, p2, p3, p4) {
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 60d3f28e2e85a19f4e53315ff2432142de3b7f04
 
 // All Reset
 
@@ -100,4 +103,8 @@ function allReset() {
 
 function Resetall() {
     document.getElementById("list").innerHTML='';
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 60d3f28e2e85a19f4e53315ff2432142de3b7f04
