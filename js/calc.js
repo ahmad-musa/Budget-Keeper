@@ -14,6 +14,10 @@ function budgets(budget, p1, p2, p3, p4) {
 
     document.getElementById("list").innerHTML=" ";
 
+    if(balance == 0 || p1 == 0 || p2 == 0 || p3 == 0 || p4 == 0){
+        alert("Check your input");
+    }
+
     var node = document.createElement("li");  // Create a <li> node
     var textnode = document.createTextNode(`Here is your budget calculation`);   // Create a text node
     node.appendChild(textnode);     // Append the text to <li>
@@ -55,125 +59,33 @@ function budgets(budget, p1, p2, p3, p4) {
 
 
 
+    document.getElementById("list2").innerHTML= ' '; //for non repeating 
+
+    var node = document.createElement("h4");  // Create a <h4> node
+    var textnode = document.createTextNode(`Total and Remaining`);   // Create a text node
+    node.appendChild(textnode);     // Append the text to <li>
+    document.getElementById("list2").appendChild(node);
+    
+
 
     var node = document.createElement("li");  // Create a <li> node
     var textnode = document.createTextNode(`Total Cost : ${cost}`);   // Create a text node
     node.appendChild(textnode);     // Append the text to <li>
-    document.getElementById("list").appendChild(node);
+    document.getElementById("list2").appendChild(node);
     
     
     var node = document.createElement("li");  // Create a <li> node
     var textnode = document.createTextNode(`Remaining Balance : ${balance - cost}`);   // Create a text node
     node.appendChild(textnode);     // Append the text to <li>
-    document.getElementById("list").appendChild(node);
+    document.getElementById("list2").appendChild(node);
 
 
-
+    if(balance <= cost){
+        alert("You're out of money");
+    }
 }
 
 
-// function grade(number) {
-//     if(number < 0 || number > 100){
-//         console.log("Enter valid number");
-//         document.getElementById("list").innerHTML="Enter valid number";
-//     }
-//      else if(number >= 0 && number < 33){
-//         console.log("Grade: F");
-//         document.getElementById("list").innerHTML="Grade: F";
-//     }
-//      else if(number >= 33 && number < 40){
-//         console.log("Grade: D");
-//         document.getElementById("list").innerHTML="Grade: D";
-//     }
-//      else if(number >= 40 && number < 50){
-//         console.log("Grade: C");
-//         document.getElementById("list").innerHTML="Grade: C";
-//     }
-//      else if(number >= 50 && number < 60){
-//         console.log("Grade: B");
-//         document.getElementById("list").innerHTML="Grade: B";
-//     }
-//      else if(number >= 60 && number < 70){
-//         console.log("Grade: A-");
-//         document.getElementById("list").innerHTML="Grade: A-";
-//     }
-//      else if(number >= 70 && number < 80){
-//         console.log("Grade: A");
-//         document.getElementById("list").innerHTML="Grade: A";
-//     }
-//      else if(number >= 80){
-//         console.log("Grade: A+");
-//         document.getElementById("list").innerHTML="Grade: A+";
-//     }}
-
-
-
-
-
-//          Basic Calculator Operation     //
-
-
-// function calcadd(num1, num2) {
-//     console.log(`Summation = ${num1 + num2}`);
-
-//     document.getElementById("list").innerHTML=" ";
-
-//     var node = document.createElement("li");  // Create a <li> node
-//     var textnode = document.createTextNode(`Summation = ${num1 + num2}`);   // Create a text node
-//     node.appendChild(textnode);     // Append the text to <li>
-//     document.getElementById("list").appendChild(node);
-// }
-
-// function calcsub(num1, num2) {
-//     console.log(`Substraction = ${num1 - num2}`);
-
-//     document.getElementById("list").innerHTML=" ";
-
-//     var node = document.createElement("li");  // Create a <li> node
-//     var textnode = document.createTextNode(`Substraction = ${num1 - num2}`);   // Create a text node
-//     node.appendChild(textnode);     // Append the text to <li>
-//     document.getElementById("list").appendChild(node);
-
-// }
-
-// function calcmul(num1, num2) {
-//     console.log(`Multiplication = ${num1 * num2}`);
-
-//     document.getElementById("list").innerHTML=" ";
-
-//     var node = document.createElement("li");  // Create a <li> node
-//     var textnode = document.createTextNode(`Multiplication = ${num1 * num2}`);   // Create a text node
-//     node.appendChild(textnode);     // Append the text to <li>
-//     document.getElementById("list").appendChild(node);
-
-// }
-
-// function calcdiv(num1, num2) {
-//     console.log(`Division = ${num1 / num2}`);
-
-//     document.getElementById("list").innerHTML=" ";
-
-    
-
-//     var node = document.createElement("li");  // Create a <li> node
-//     var textnode = document.createTextNode(`Division = ${num1 / num2}`);   // Create a text node
-//     node.appendChild(textnode);     // Append the text to <li>
-//     document.getElementById("list").appendChild(node);
-
-// }
-
-// function calcrem(num1, num2) {
-//     console.log(`Reminder = ${num1 % num2}`);
-
-//     document.getElementById("list").innerHTML=" ";
-
-    
-//     var node = document.createElement("li");  // Create a <li> node
-//     var textnode = document.createTextNode(`Reminder = ${num1 % num2}`);   // Create a text node
-//     node.appendChild(textnode);     // Append the text to <li>
-//     document.getElementById("list").appendChild(node);
-
-// }
 
 
 
