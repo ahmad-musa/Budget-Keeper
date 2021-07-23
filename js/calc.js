@@ -1,4 +1,8 @@
 function budgets(budget, p1, p2, p3, p4) {
+
+
+    //                    List1 Starts
+    
     console.log(`Here is your budget calculation`);
     console.log(` `);
     console.log(`Your Budget is :${budget}`);
@@ -14,7 +18,7 @@ function budgets(budget, p1, p2, p3, p4) {
 
     document.getElementById("list").innerHTML=" ";
 
-    if(balance == 0 || p1 == 0 || p2 == 0 || p3 == 0 || p4 == 0){
+    if(balance <= 0 || p1 < 0 || p2 < 0 || p3 < 0 || p4 < 0) {
         alert("Check your input");
     }
 
@@ -58,39 +62,52 @@ function budgets(budget, p1, p2, p3, p4) {
     document.getElementById("list").appendChild(node);
 
 
+//                    List1 Ends
 
+
+
+
+//                    List2 Starts
+
+
+   
     document.getElementById("list2").innerHTML= ' '; //for non repeating 
 
     var node = document.createElement("h4");  // Create a <h4> node
     var textnode = document.createTextNode(`Total and Remaining`);   // Create a text node
     node.appendChild(textnode);     // Append the text to <li>
     document.getElementById("list2").appendChild(node);
-    
 
+    if(balance <= cost){
+        alert("Out of money. Total Cost and Remaining Balance won't be showed");
+    }
 
+    else if(balance<=0 || p1 < 0 || p2 < 0 || p3 < 0 || p4 < 0){
+        document.getElementById("list2").innerHTML= ' ';
+        alert("Give proper input");
+    }
+
+    else {
     var node = document.createElement("li");  // Create a <li> node
     var textnode = document.createTextNode(`Total Cost : ${cost}`);   // Create a text node
     node.appendChild(textnode);     // Append the text to <li>
     document.getElementById("list2").appendChild(node);
     
-    
+
     var node = document.createElement("li");  // Create a <li> node
     var textnode = document.createTextNode(`Remaining Balance : ${balance - cost}`);   // Create a text node
     node.appendChild(textnode);     // Append the text to <li>
     document.getElementById("list2").appendChild(node);
 
-
-    if(balance <= cost){
-        alert("You're out of money");
     }
+
+
+    //                    List2 Ends
+
+
 }
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 60d3f28e2e85a19f4e53315ff2432142de3b7f04
 
 // All Reset
 
@@ -98,13 +115,11 @@ function budgets(budget, p1, p2, p3, p4) {
 function allReset() {
     document.getElementById("frm").reset();
     document.getElementById("list").innerHTML='';
+    document.getElementById("list2").innerHTML='';
 
 }
 
 function Resetall() {
     document.getElementById("list").innerHTML='';
-<<<<<<< HEAD
+    document.getElementById("list2").innerHTML='';
 }
-=======
-}
->>>>>>> 60d3f28e2e85a19f4e53315ff2432142de3b7f04
