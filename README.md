@@ -1,7 +1,7 @@
 # Budget-Keeper
 ## A single page website made with **HTML**, **CSS** and **JavaScript**.
 ### Goal:
-Keep tracking of 
+Keep tracking & show instantly these information 
 <ul>
   <li> Budget</li> 
   <li> Various Expenditures </li>
