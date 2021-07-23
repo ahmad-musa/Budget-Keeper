@@ -18,10 +18,12 @@ function budgets(budget, p1, p2, p3, p4) {
 
     document.getElementById("list").innerHTML=" ";
 
-    if(balance <= 0 || p1 < 0 || p2 < 0 || p3 < 0 || p4 < 0) {
+    if(balance < 0 || p1 < 0 || p2 < 0 || p3 < 0 || p4 < 0) {
         alert("Check your input");
+        document.getElementById("list2").innerHTML= ' ';
     }
 
+    else{
     var node = document.createElement("li");  // Create a <li> node
     var textnode = document.createTextNode(`Here is your budget calculation`);   // Create a text node
     node.appendChild(textnode);     // Append the text to <li>
@@ -33,7 +35,7 @@ function budgets(budget, p1, p2, p3, p4) {
     document.getElementById("list").appendChild(node);
 
     var node = document.createElement("li");  // Create a <li> node
-    var textnode = document.createTextNode(`Your Budget is :${budget}`);   // Create a text node
+    var textnode = document.createTextNode(`Your Budget is : ${budget}`);   // Create a text node
     node.appendChild(textnode);     // Append the text to <li>
     document.getElementById("list").appendChild(node);
 
@@ -60,7 +62,8 @@ function budgets(budget, p1, p2, p3, p4) {
     var textnode = document.createTextNode(`4th Product : ${p4}`);   // Create a text node
     node.appendChild(textnode);     // Append the text to <li>
     document.getElementById("list").appendChild(node);
-
+    
+    }
 
 //                    List1 Ends
 
@@ -79,7 +82,7 @@ function budgets(budget, p1, p2, p3, p4) {
     document.getElementById("list2").appendChild(node);
 
     if(balance <= cost){
-        alert("Out of money. Total Cost and Remaining Balance won't be showed");
+        alert("Total Cost and Remaining Balance won't be showed");
     }
 
     else if(balance<=0 || p1 < 0 || p2 < 0 || p3 < 0 || p4 < 0){
