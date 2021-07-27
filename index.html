@@ -28,31 +28,31 @@
                                 <form action="#" name="frm" id="frm">
                                     <div class="top">
                                         <label for="sub1" class="label red-label">Budget</label><br>
-                                        <input type="number" class="names red-border" name="budget"
-                                            id="sub1" placeholder="enter your budget"><br>
+                                        <input type="number" class="names red-border" name="budget" id="sub1"
+                                            placeholder="enter your budget"><br>
 
-                                            <label for="sub2" class="label">Product 1 </label><br>
-                                        <input type="number" class="names" name="p1"
-                                            id="sub2" placeholder="Product Price"><br>
+                                        <label for="sub2" class="label">Product 1 </label><br>
+                                        <input type="number" class="names" name="p1" id="sub2"
+                                            placeholder="Product Price"><br>
 
-                                            <label for="sub3" class="label">Product 2 </label> <br>
-                                        <input type="number" class="names" name="p2"
-                                            id="sub3" placeholder="Product Price"><br>
+                                        <label for="sub3" class="label">Product 2 </label> <br>
+                                        <input type="number" class="names" name="p2" id="sub3"
+                                            placeholder="Product Price"><br>
 
-                                            <label for="sub4" class="label">Product 3</label><br>
-                                        <input type="number" class="names" name="p3"
-                                            id="sub4" placeholder="Product Price">     <br>
+                                        <label for="sub4" class="label">Product 3</label><br>
+                                        <input type="number" class="names" name="p3" id="sub4"
+                                            placeholder="Product Price"> <br>
 
-                                            <label for="sub5" class="label"> Product 4</label>    <br>          <input type="number" class="names" name="p4"
-                                            id="sub5" placeholder="Product Price">                            
-                                        </div> <br>
-                                    <!-- <button type="submit" class="btn1">Submit</button> -->
-                                   
+                                        <label for="sub5" class="label"> Product 4</label> <br> <input type="number"
+                                            class="names" name="p4" id="sub5" placeholder="Product Price">
+                                    </div> <br>
+
 
 
                                     <div class="bottom bottom2">
-                                        <button type="button" class="mod btn1" onClick="budgets(+frm.budget.value, +frm.p1.value, +frm.p2.value, +frm.p3.value, +frm.p4.value)">Check</button>
-                                        <button type="button" class="mod btn1 red" onClick="allReset()">Delete</button>
+                                        <button type="button" class="btn1"
+                                            onClick="budgets(+frm.budget.value, +frm.p1.value, +frm.p2.value, +frm.p3.value, +frm.p4.value)">Check</button>
+                                        <button type="button" class="btn1 red" onClick="allReset()">Delete</button>
                                     </div>
                                 </form>
                             </div>
@@ -61,33 +61,33 @@
 
 
 
-                <div class="col col-4 col-md-6 col-sm-8 col-xs-10 right pos-rel">
-                    <div class="top">
-                        <h4 class="heads text-center">Check Your Budget</h4>
-                        <hr class="hr">
-                        <div class="card card2">
-                            <div class="card-body">
-                                <ul id="list">
+                    <div class="col col-4 col-md-6 col-sm-8 col-xs-10 right pos-rel">
+                        <div class="top">
+                            <h4 class="heads text-center">Check Your Budget</h4>
+                            <hr class="hr">
+                            <div class="card card2">
+                                <div class="card-body">
+                                    <ul id="list">
 
-                                </ul>
+                                    </ul>
 
-                                <ul id="list2">
-                                </ul>
+                                    <ul id="list2">
+                                    </ul>
 
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="bottom bottom2">
+                            <button type="button" class="btn1 btn2" onClick="Resetall()">Clear</button>
                         </div>
                     </div>
 
-                     <div class="bottom bottom2">
-                           <button type="button" class="btn2" onClick="Resetall()">Clear</button>
-                     </div>
+
+
                 </div>
-                      
-                
 
-            </div>
 
-                
 
             </div>
 
